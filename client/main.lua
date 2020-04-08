@@ -47,18 +47,22 @@ function AddArmurieMenu(menu)
         TriggerServerEvent('buyKnife')
         Citizen.Wait(1)
         ESX.ShowAdvancedNotification("Armurie", "Vous avez acheter un ~b~Couteau", "", "CHAR_ARTHUR", 1)
+        print("achat effectué by nezow")
     elseif item == bat then
     	TriggerServerEvent('buyBat')
     	Citizen.Wait(1)
     	ESX.ShowAdvancedNotification("Armuerie", "Vous avez acheter une ~b~Bat", "", "CHAR_ARTHUR", 1)
+        print("achat effectué by nezow")
     elseif item == golfclub then
     	TriggerServerEvent('buyGolfclub')
     	Citizen.Wait(1)
     	ESX.ShowAdvancedNotification("Armuerie", "Vous avez achetez un ~b~Club de Golf", "", "CHAR_ARTHUR", 1)
+        print("achat effectué by nezow")
     elseif item == crowbar then
     	TriggerServerEvent('buyCrowbar')
     	Citizen.Wait(1)
     	ESX.ShowAdvancedNotification("Armuerie", "Vous avez achetez un Pied de Biche", "", "CHAR_ARTHUR", 1)
+        print("achat effectué by nezow")
         end
     end
 end
@@ -97,6 +101,7 @@ Citizen.CreateThread(function()
 
             if dist <= 1.2 then
                 ESX.ShowHelpNotification("Appuyez sur [~g~E~w~] pour ouvrir l'~g~armurie")
+                print("by nezow")
 				if IsControlJustPressed(1,51) then 
                     mainMenu:Visible(not mainMenu:Visible())
 				end
