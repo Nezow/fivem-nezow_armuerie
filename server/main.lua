@@ -8,7 +8,7 @@ RegisterNetEvent('buyKnife')
 AddEventHandler('buyKnife', function()
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
-    local price = Config.PriceKnife
+    local price = 1550
     xPlayer.removeMoney(price)
     xPlayer.addWeapon('WEAPON_KNIFE', 1)
 end)
@@ -17,7 +17,7 @@ RegisterNetEvent('buyBat')
 AddEventHandler('buyBat', function()
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
-    local price = Config.PriceBat
+    local price = 950
     xPlayer.removeMoney(price)
     xPlayer.addWeapon('WEAPON_BAT', 1)
 end)
@@ -26,7 +26,7 @@ RegisterNetEvent('buyGolfclub')
 AddEventHandler('buyGolfclub', function()
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
-    local price = Config.PriceGlofclub
+    local price = 1150
     xPlayer.removeMoney(price)
     xPlayer.addWeapon('WEAPON_GOLFCLUB', 1)
 end)
@@ -35,17 +35,7 @@ RegisterNetEvent('buyCrowbar')
 AddEventHandler('buyCrowbar', function()
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(source)
-    local price = Config.PriceCrowbar
+    local price = 2000
     xPlayer.removeMoney(price)
     xPlayer.addWeapon('WEAPON_CROWBAR', 1)
-end)
-
-RegisterServerEvent('nezow_armuerie:remove')
-AddEventHandler('nezow_armuerie:remove', function()
-	local xPlayer = ESX.GetPlayerFromId(source)
-	xPlayer.removeInventoryItem('clip', 1)
-end)
-
-ESX.RegisterUsableItem('clip', function(source)
-	TriggerClientEvent('nezow_armuerie:clipcli', source)
 end)
