@@ -1,7 +1,5 @@
 ESX = nil
 
-print("By nezow")
-
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterNetEvent('buyKnife')
