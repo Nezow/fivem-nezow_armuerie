@@ -33,19 +33,15 @@ function AddArmurieMenu(menu)
     armuriemenu.SubMenu.OnItemSelect = function(menu, item)
     if item == knife then
         TriggerServerEvent('buyKnife')
-        Wait(1)
         ESX.ShowAdvancedNotification("Armurie", "Vous avez acheter un ~b~Couteau", "", "CHAR_ARTHUR", 1)
     elseif item == bat then
     	TriggerServerEvent('buyBat')
-    	Wait(1)
     	ESX.ShowAdvancedNotification("Armuerie", "Vous avez acheter une ~b~Bat", "", "CHAR_ARTHUR", 1)
     elseif item == golfclub then
     	TriggerServerEvent('buyGolfclub')
-    	Wait(1)
     	ESX.ShowAdvancedNotification("Armuerie", "Vous avez achetez un ~b~Club de Golf", "", "CHAR_ARTHUR", 1)
     elseif item == crowbar then
     	TriggerServerEvent('buyCrowbar')
-    	Wait(1)
     	ESX.ShowAdvancedNotification("Armuerie", "Vous avez achetez un Pied de Biche", "", "CHAR_ARTHUR", 1)
         end
     end
