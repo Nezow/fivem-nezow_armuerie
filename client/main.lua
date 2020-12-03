@@ -70,17 +70,23 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Wait(0)
+        local arm = false
         _menuPool:ProcessMenus()
         for k in pairs(nezow) do
             local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
             local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, nezow[k].x, nezow[k].y, nezow[k].z)
             if dist <= 1.2 then
+                arm = true
                 ESX.ShowHelpNotification("Appuyez sur [~g~E~w~] pour ouvrir l'~g~armurie")
 				if IsControlJustPressed(1,51) then 
                     mainMenu:Visible(not mainMenu:Visible())
 				end
             end
+        end
+        if arm then
+            Wait(1)
+        else
+            Wait(400)
         end
     end
 end)
