@@ -77,7 +77,7 @@ Citizen.CreateThread(function()
             local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, nezow[k].x, nezow[k].y, nezow[k].z)
             if dist <= 1.2 then
                 arm = true
-                ESX.ShowHelpNotification("Appuyez sur [~g~E~w~] pour ouvrir l'~g~armurie")
+                ESX.ShowHelpNotification("Appuyez sur [~g~E~w~] pour ouvrir l'~g~armurerie")
 				if IsControlJustPressed(1,51) then 
                     mainMenu:Visible(not mainMenu:Visible())
 				end
