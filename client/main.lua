@@ -51,7 +51,7 @@ AddArmurieMenu(mainMenu)
 _menuPool:RefreshIndex()
 
 local nezow = {
-	{title="Armuerie", colour=1, id=313, x = -662.10, y = -935.24, z = 20.85}
+	{title="Armurerie", colour=1, id=313, x = -662.10, y = -935.24, z = 20.85}
 }
 
 Citizen.CreateThread(function()
